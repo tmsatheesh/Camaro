@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{01ACDA66-22F3-4F9B-BF2A-861D3CE46784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{1065468B-FB5C-4E5F-9050-CBC87D178BB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{60DA3F20-DEED-4580-AE38-A296D76ADE79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{A7FC0385-84B6-4FB4-92DD-7372A45444F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{48A68BF7-0608-4AA9-9F36-809E2731150A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		NuGet.config = NuGet.config
+		README.md = README.md
+		sitecore.json = sitecore.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{0ACE73B5-5F04-4603-BC37-63706BEF40AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{0E67BAB2-5BB6-415A-B719-79B72194584C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{59A9CB03-897F-440C-A795-A95B01E040C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMS", "CMS", "{5E95CC92-C212-4AE3-9C34-F175018AA45B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{4E0EF445-5145-4EC7-9E41-BCD449D6B838}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Camaro", "Camaro", "{38D251DB-B94F-4DCA-A67B-AE2693556129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.CMS", "src\Foundation\Common\CMS\website\Camaro.Foundation.Common.CMS.csproj", "{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.Content", "src\Foundation\Common\Content\website\Camaro.Foundation.Common.Content.csproj", "{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.Core", "src\Foundation\Common\Core\website\Camaro.Foundation.Common.Core.csproj", "{87E68542-523A-4F30-BBCE-35DC067B3C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.DI", "src\Foundation\Common\DI\website\Camaro.Foundation.Common.DI.csproj", "{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.Logging", "src\Foundation\Common\Logging\website\Camaro.Foundation.Common.Logging.csproj", "{1373BEA6-EEB6-439C-BE12-FC56F419520B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.ORM", "src\Foundation\Common\ORM\website\Camaro.Foundation.Common.ORM.csproj", "{E4D69957-1812-4CDA-8005-48C0BCBBC4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.Search", "src\Foundation\Common\Search\website\Camaro.Foundation.Common.Search.csproj", "{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Foundation.Common.Serialization", "src\Foundation\Common\Serialization\website\Camaro.Foundation.Common.Serialization.csproj", "{4367CE76-056C-41F8-A9C6-33708DDB4262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Project.Website", "src\Project\Camaro\Website\Camaro.Project.Website.csproj", "{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camaro.Feature.Components", "src\Feature\Components\Website\Camaro.Feature.Components.csproj", "{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E68542-523A-4F30-BBCE-35DC067B3C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E68542-523A-4F30-BBCE-35DC067B3C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E68542-523A-4F30-BBCE-35DC067B3C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E68542-523A-4F30-BBCE-35DC067B3C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1373BEA6-EEB6-439C-BE12-FC56F419520B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1373BEA6-EEB6-439C-BE12-FC56F419520B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1373BEA6-EEB6-439C-BE12-FC56F419520B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1373BEA6-EEB6-439C-BE12-FC56F419520B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D69957-1812-4CDA-8005-48C0BCBBC4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D69957-1812-4CDA-8005-48C0BCBBC4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D69957-1812-4CDA-8005-48C0BCBBC4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D69957-1812-4CDA-8005-48C0BCBBC4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4367CE76-056C-41F8-A9C6-33708DDB4262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4367CE76-056C-41F8-A9C6-33708DDB4262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4367CE76-056C-41F8-A9C6-33708DDB4262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4367CE76-056C-41F8-A9C6-33708DDB4262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01ACDA66-22F3-4F9B-BF2A-861D3CE46784} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{1065468B-FB5C-4E5F-9050-CBC87D178BB6} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{0ACE73B5-5F04-4603-BC37-63706BEF40AB} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{0E67BAB2-5BB6-415A-B719-79B72194584C} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{59A9CB03-897F-440C-A795-A95B01E040C8} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{5E95CC92-C212-4AE3-9C34-F175018AA45B} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{4E0EF445-5145-4EC7-9E41-BCD449D6B838} = {BCC39C10-AAE8-431D-AA2F-8402E1A10C1F}
+		{BCC39C10-AAE8-431D-AA2F-8402E1A10C1F} = {C3F57797-2D54-4626-B842-51F30272E972}
+		{38D251DB-B94F-4DCA-A67B-AE2693556129} = {A7FC0385-84B6-4FB4-92DD-7372A45444F7}
+		{82C8BEE0-3AE0-422E-A9C7-6ED9398E0E42} = {5E95CC92-C212-4AE3-9C34-F175018AA45B}
+		{DA9214CC-3F99-4C4E-A52D-4793E45F7DE0} = {F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}
+		{87E68542-523A-4F30-BBCE-35DC067B3C95} = {3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}
+		{DCC84D98-BD6F-42DD-8BBE-60253E2D9D92} = {0ACE73B5-5F04-4603-BC37-63706BEF40AB}
+		{1373BEA6-EEB6-439C-BE12-FC56F419520B} = {0E67BAB2-5BB6-415A-B719-79B72194584C}
+		{E4D69957-1812-4CDA-8005-48C0BCBBC4CE} = {01ACDA66-22F3-4F9B-BF2A-861D3CE46784}
+		{FB17D1E5-9483-4DCD-B8FF-A782E38DA50A} = {1065468B-FB5C-4E5F-9050-CBC87D178BB6}
+		{4367CE76-056C-41F8-A9C6-33708DDB4262} = {4E0EF445-5145-4EC7-9E41-BCD449D6B838}
+		{0F0512A0-9796-4C69-80C8-CB0EFF9C4AA4} = {38D251DB-B94F-4DCA-A67B-AE2693556129}
+		{1D736A30-7BAE-4AC6-8E54-2DC0A53F5CFB} = {59A9CB03-897F-440C-A795-A95B01E040C8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
