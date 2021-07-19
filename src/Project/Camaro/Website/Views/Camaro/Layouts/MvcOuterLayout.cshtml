@@ -64,6 +64,10 @@
         @Scripts.Render("~/bundles/headscripts.js")
         <link rel="stylesheet" type="text/css"  href="/assets/css/font-awesome.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="/assets/css/fonts.min.css" media="all">*@
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     @*@if (settingsItem != null && isRestricted)
@@ -72,5 +76,31 @@
         }*@
 
     @RenderBody()
+
+    <header class="site-header">
+        @Html.Sitecore().Placeholder("header")
+    </header>
+
+    <div class="site-main">
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    <!-- Footer  -->
+    <footer class="site-footer">
+        @Html.Sitecore().Placeholder("footer")
+    </footer>
+    <div class="preloader"></div><!-- /.preloader -->
+    <!-- /.page-wrapper -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- /.scroll-to-top -->
+
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/wow.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/handlebars.js"></script>
+    <script src="~/assets/js/deals.js"></script>
+    <script src="~/assets/js/Dealssam.js"></script>
 </body>
 </html>

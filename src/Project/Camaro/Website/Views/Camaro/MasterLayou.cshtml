@@ -1,0 +1,55 @@
+﻿@using Sitecore.Mvc
+@using Sitecore;
+@using Sitecore.Data;
+@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from ashik.templatepath.net/cameron-main-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jan 2020 15:04:44 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@Html.Sitecore().Field("Page Title")</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        @Html.Sitecore().Placeholder("header")
+    </header>
+
+    <div class="site-main">
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    <!-- Footer  -->
+    <footer class="site-footer">
+        @Html.Sitecore().Placeholder("footer")
+    </footer>
+    <div class="preloader"></div><!-- /.preloader -->
+    <!-- /.page-wrapper -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- /.scroll-to-top -->
+
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/wow.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/handlebars.js"></script>
+    <script src="~/assets/js/deals.js"></script>
+    <script src="~/assets/js/Dealssam.js"></script>
+</body>
+
+
+<!-- Mirrored from ashik.templatepath.net/cameron-main-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jan 2020 15:05:29 GMT -->
+</html>
