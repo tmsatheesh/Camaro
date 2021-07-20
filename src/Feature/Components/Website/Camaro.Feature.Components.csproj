@@ -287,8 +287,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
+    <Compile Include="Models\Banners.cs" />
     <Compile Include="Models\Footer.cs" />
     <Compile Include="Models\Header.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -311,6 +313,8 @@
     <Content Include="Properties\launchSettings.json" />
     <Content Include="Views\Camaro\Components\Header\Header.cshtml" />
     <Content Include="Views\Camaro\Components\Footer\Footer.cshtml" />
+    <Content Include="Views\Camaro\Components\Banner.cshtml" />
+    <Content Include="Views\Camaro\Components\Footer\Banner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Common\Content\website\Camaro.Foundation.Common.Content.csproj">

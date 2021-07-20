@@ -1,0 +1,36 @@
+﻿@model sitecore.learning.sam.Models.Learning.Banners
+
+<div class="main-banner-wrapper">
+    <section class="banner-style-one owl-theme owl-carousel no-dots">
+        @if (Model.NameLinkItems != null && Model.NameLinkItems.Count > 0)
+        {
+            foreach (var item in Model.NameLinkItems)
+            {
+                <div class="slide slide-one" style="background-image: url(images/slider/slider-1-1.jpg);">
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-12 text-center">
+                                <h3 class="banner-title">@Html.Raw(item.Title)</h3>
+                                <p>@Html.Raw(item.Description)</p>
+                                <div class="btn-block">
+                                    <a href="@item.CTALink" class="banner-btn">@item.CTAText</a>
+                                </div><!-- /.btn-block -->
+                            </div><!-- /.col-lg-12 -->
+
+
+
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div>
+            }
+        }
+    </section><!-- /.banner-style-one -->
+    <div class="carousel-btn-block banner-carousel-btn">
+        <span class="carousel-btn left-btn"><i class="cameron-icon-left-arrow"></i></span>
+        <span class="carousel-btn right-btn"><i class="cameron-icon-right-arrow"></i></span>
+    </div><!-- /.carousel-btn-block banner-carousel-btn -->
+</div><!-- /.main-banner-wrapper -->
+
+<!-- /.main-banner-wrapper -->
