@@ -256,7 +256,7 @@
     <Compile Include="Services\IBaseService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.Content.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.Content.RegisterContainer.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

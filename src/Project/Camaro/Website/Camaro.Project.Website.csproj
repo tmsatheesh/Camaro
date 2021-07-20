@@ -321,21 +321,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\ENBD\ENBDGroup.Project.ENBD.Website.Serialization.Config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.UAE.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.UK.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.India.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Egypt.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.KSA.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.SmartBusiness.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.REIT.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Singapore.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Research.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.ETFS.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.PearlMuseum.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Capital.KSA.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Securities.config" />
-    <Content Include="App_Config\Include\ENBD\ENBD.Golf.config" />
+    <Content Include="App_Config\Include\Camaro\Camaro.Site.config" />
     <Content Include="assets\fonts\fontawesome-webfont3e6e.eot" />
     <Content Include="assets\fonts\fontawesome-webfont3e6e.ttf" />
     <Content Include="assets\fonts\fontawesome-webfont3e6e.woff" />

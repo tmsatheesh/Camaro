@@ -1,6 +1,6 @@
 ﻿using Camaro.Foundation.Common.Content.Repositories;
 using Camaro.Foundation.Common.Search.BaseSearch;
-using LivApp.Foundation.Content.Services;
+using Camaro.Foundation.Content.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 using System;

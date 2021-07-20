@@ -172,7 +172,7 @@ function PreparePackageFiles() {
         //config.websiteRoot + "\\App_Config\\Include\\{Feature,Foundation,Project}\\*Serialization.config",
         //config.websiteRoot + "\\App_Config\\Include\\{Feature,Foundation,Project}\\z.*DevSettings.config",
         config.websiteRoot + "\\bin\\*{dll,pdb,dll.config}",
-        "!" + config.websiteRoot + "\\bin\\{ENBDGroup.}*dll",
+        "!" + config.websiteRoot + "\\bin\\{Camaro.}*dll",
         //"!" + config.websiteRoot + "\\bin\\Sitecore.{Feature,Foundation,Habitat,Demo,Common}*dll"
     ];
     console.log(excludeList);
@@ -182,7 +182,7 @@ function PreparePackageFiles() {
 
 function PublishAssemblies() {
     var root = "./Src";
-    var binFiles = root + "/**/website/**/bin/{HtmlSanitizer,AngleSharp,Hammock.ClientProfile,ENBDGroup.}*.dll";
+    var binFiles = root + "/**/website/**/bin/{HtmlSanitizer,AngleSharp,Hammock.ClientProfile,Camaro.}*{dll,pdb}";
     var destination = config.websiteRoot + "/bin/";
     return src(binFiles, { base: root })
         .pipe(rename({ dirname: "" }))
@@ -193,7 +193,7 @@ function PublishAssemblies() {
 function PublishAllConfigs() {
     var root = "./Src";
     var roots = [root + "/**/App_Config", "!" + root + "/**/tests/App_Config", "!" + root + "/**/obj/**/App_Config"];
-    var files = "/**/ENBDGroup.*.config";
+    var files = "/**/Camaro.*.config";
     var destination = config.websiteRoot + "\\App_Config";
     return src(roots, { base: root }).pipe(
         foreach(function (stream, file) {

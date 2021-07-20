@@ -262,7 +262,7 @@
     <Compile Include="RegisterControllers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.DI.RegisterControllers.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.DI.RegisterControllers.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

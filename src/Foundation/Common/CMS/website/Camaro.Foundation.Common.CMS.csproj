@@ -80,17 +80,17 @@
     <Compile Include="Speak\Applications\InsertLinkDialogTree.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.ENBDSiteResolver.config" />
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.ItemNotFoundResolver.config" />
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.RobotTxtProcessor.config" />
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.SitemapXmlProcessor.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.ENBDSiteResolver.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.ItemNotFoundResolver.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.RobotTxtProcessor.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.SitemapXmlProcessor.config" />
     <Content Include="sitecore\shell\Applications\Dialogs\ExternalLink\ExternalLink.xml" />
     <Content Include="sitecore\shell\Applications\Dialogs\JavascriptLink\JavascriptLink.xml" />
     <Content Include="sitecore\shell\client\Applications\Dialogs\InsertLinkViaTreeDialog.js" />
-    <Content Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.HtmlCacheClear.config" />
-    <None Include="App_Config\Include\Foundation\ENBDGroup.Foundation.Common.CMS.Pipelines.InternalServerErrorResolver.config" />
-    <Content Include="App_Config\Include\Security\ENBDGroup.Foundation.Common.CMS.Pipelines.DisableSQL.config" />
-    <Content Include="App_Config\Include\Security\ENBDGroup.Foundation.Common.CMS.Pipelines.MediaRequestProtectionSecret.config" />
+    <Content Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.HtmlCacheClear.config" />
+    <None Include="App_Config\Include\Foundation\Camaro.Foundation.Common.CMS.Pipelines.InternalServerErrorResolver.config" />
+    <Content Include="App_Config\Include\Security\Camaro.Foundation.Common.CMS.Pipelines.DisableSQL.config" />
+    <Content Include="App_Config\Include\Security\Camaro.Foundation.Common.CMS.Pipelines.MediaRequestProtectionSecret.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>

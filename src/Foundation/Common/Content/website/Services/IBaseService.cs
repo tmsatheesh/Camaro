@@ -1,7 +1,7 @@
 ﻿using Sitecore.Data.Items;
 using System;
 using System.Collections.Generic;
-namespace LivApp.Foundation.Content.Services
+namespace Camaro.Foundation.Content.Services
 {
     public interface IBaseService
     {

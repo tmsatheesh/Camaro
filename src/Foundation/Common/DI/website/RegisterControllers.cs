@@ -9,7 +9,7 @@ namespace Camaro.Foundation.Common.DI
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddMvcControllers(
-                "ENBDGroup.Feature.*");
+                "Camaro.Feature.*");
         }
     }
 }
