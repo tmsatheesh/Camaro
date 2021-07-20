@@ -1,0 +1,111 @@
+﻿@model Camaro.Feature.Components.Models.IFooter
+@using Glass.Mapper.Sc.Web.Mvc
+
+<footer class="site-footer">
+    <div class="main-footer">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget about-widget">
+                        @using (Html.Glass().BeginRenderLink(Model, x => x.LogoLink, isEditable: true))
+                        {
+                            @Html.Glass().RenderImage(Model, x => x.Logo, isEditable: true)
+                        }
+                       
+                        @Html.Raw(Html.Glass().Editable(Model, x => x.LogoDescription))
+
+
+                        <div class="social-block">
+                            @using (Html.Glass().BeginRenderLink(Model, x => x.fbLink, isEditable: true))
+                            {
+                                <i class="fa fa-facebook-f"></i>
+                            }
+                            @using (Html.Glass().BeginRenderLink(Model, x => x.twLink, isEditable: true))
+                            {
+                                <i class="fa fa-twitter"></i>
+                            }
+                            @using (Html.Glass().BeginRenderLink(Model, x => x.vmLink, isEditable: true))
+                            {
+                                <i class="fa fa-vimeo"></i>
+                            }
+                            @using (Html.Glass().BeginRenderLink(Model, x => x.lnLink, isEditable: true))
+                            {
+                                <i class="fa fa-linkedin"></i>
+                            }
+
+                        </div><!-- /.social-block -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget links-widget">
+                        <div class="footer-widget-title">
+                            <h3>@Html.Glass().Editable(Model, x => x.TitleService)</h3>
+                        </div><!-- /.footer-widget-title -->
+                        <ul class="links-lists">
+                            @if (Model.linkItems != null && Model.linkItems.Count() > 0)
+                            {
+                                foreach (var info in Model.linkItems)
+                                {
+                                    <li>
+                                        @using (Html.Glass().BeginRenderLink(info, x => x.LinkingItems, isEditable: true))
+                                        {
+                                            @Html.Glass().Editable(info, x => x.LinkingItems)
+                                        }
+                                    </li>
+
+                                }
+                            }
+
+                        </ul><!-- /.links-lists -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget works-widget">
+                        <div class="footer-widget-title">
+                            <h3>@Html.Glass().Editable(Model, x => x.Title)</h3>
+                        </div><!-- /.footer-widget-title -->
+                        <div class="gallery-wrapper clearfix">
+                            @if (Model.imageLinks != null && Model.imageLinks.Count() > 0)
+                            {
+                                foreach (var item in Model.imageLinks)
+                                {
+                                    <div class="single-gallery-item">
+                                        @using (Html.Glass().BeginRenderLink(item, x => x.ImageLink, isEditable: true))
+                                        {
+                                            @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                                        }
+
+                                    </div><!-- /.single-gallery-item -->
+                                }
+                            }
+
+                        </div><!-- /.gallery-wrapper -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget newsletter-widget">
+                        <div class="footer-widget-title">
+                            <h3>@Html.Glass().Editable(Model, x => x.TitleNews)</h3>
+                        </div><!-- /.footer-widget-title -->
+                        <form action="#" class="newsletter-form">
+                            @Html.Raw(Html.Glass().Editable(Model, x => x.DescripNews))
+                            <input type="text" placeholder="Enter your email">
+                            <button type="submit">@Html.Glass().Editable(Model, x => x.Button)</button>
+                        </form><!-- /.newsletter-form -->
+                    </div><!-- /.footer-widget newsletter-widget -->
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.main-footer -->
+    <div class="bottom-footer text-center">
+        <div class="container">
+            <p>
+                @using (Html.Glass().BeginRenderLink(Model, x => x.CompanyLink, isEditable: true))
+                {
+                    @Html.Glass().Editable(Model, x => x.CompanyLink)
+                }
+                @Html.Raw(Html.Glass().Editable(Model, x => x.Message))
+            </p>
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
+</footer><!-- /.site-footer -->

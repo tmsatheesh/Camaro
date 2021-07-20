@@ -54,11 +54,13 @@
                                     <ul class="sub-menu">
                                         @foreach (var subitem in item.SubMenuItems)
                                         {
-                                            <li>
-                                                @using (Html.Glass().BeginRenderLink(subitem, x => x.Link, isEditable: true))
-                                                {
-                                                    @Html.Glass().Editable(subitem, x => x.LinkText)
-                                                }
+                                        <li>
+                                            @using (Html.Glass().BeginRenderLink(subitem, x => x.Link, isEditable: true))
+                                            {
+                                                @Html.Glass().Editable(subitem, x => x.LinkText)
+                                            }
+                                            @if (subitem.SubMenuItems != null && subitem.SubMenuItems.Any())
+                                            {
                                                 <ul class="sub-menu">
                                                     @foreach (var subsubmenu in subitem.SubMenuItems)
                                                     {
@@ -71,7 +73,7 @@
                                                         </li>
                                                     }
                                                 </ul>
-
+                                            }
                                             </li>
 
                                         }
