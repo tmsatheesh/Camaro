@@ -19,9 +19,9 @@
 
                                     @using (Html.Glass().BeginRenderLink(item, x => x.CTALink, isEditable: true))
                                     {
-                                    <a class="banner-btn" 
-                                       @Html.Glass().Editable(item, x => x.CTALink) > </a>
-                                                                        
+
+                                        @Html.Glass().Editable(item, x => x.CTALink, new { @class = "banner-btn" })
+
                                     }
 
 
