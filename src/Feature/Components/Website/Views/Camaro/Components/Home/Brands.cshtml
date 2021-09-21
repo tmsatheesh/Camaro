@@ -1,0 +1,41 @@
+﻿@model Camaro.Feature.Components.Models.Home.IBrands
+@using Glass.Mapper.Sc.Web.Mvc
+
+@if (Model.ClassStyle == "Classchange")
+{
+    <section class="brands-area-one home-two">
+        <div class="container">
+            <div class="brands-carousel-one owl-carousel owl-theme">
+                @if (Model.imageListFields != null && Model.imageListFields.Count() > 0)
+                {
+                    foreach (var item in Model.imageListFields)
+                    {
+                        <div class="item">
+                            @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                        </div><!-- /.item -->
+                    }
+                }
+
+            </div><!-- /.brands-carousel-one -->
+        </div><!-- /.container -->
+    </section><!-- /.brands-area-one -->
+}
+else
+{
+    <section class="brands-area-one">
+        <div class="container">
+            <div class="brands-carousel-one owl-carousel owl-theme">
+                @if (Model.imageListFields != null && Model.imageListFields.Count() > 0)
+                {
+                    foreach (var item in Model.imageListFields)
+                    {
+                        <div class="item">
+                            @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                        </div><!-- /.item -->
+                    }
+                }
+
+            </div><!-- /.brands-carousel-one -->
+        </div><!-- /.container -->
+    </section><!-- /.brands-area-one -->
+}

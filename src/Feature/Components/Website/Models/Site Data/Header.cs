@@ -28,6 +28,12 @@ namespace Camaro.Feature.Components.Models
         Link GPlink { get; set; }
         [SitecoreField(FieldName = "Menu Items")]
         IEnumerable<IMenuItem> MenuItems { get; set; }
+        [SitecoreField(FieldName = "Logo Link")]
+        Link LogoLink { get; set; }
+        [SitecoreField(FieldName = "Logo Image1")]
+        Image Logo1 { get; set; }
+        [SitecoreField(FieldName = "Logo Image2")]
+        Image Logo2 { get; set; }
     }
     public interface IMenuItem: IGlassBase
     {

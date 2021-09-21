@@ -1,0 +1,64 @@
+﻿@model  Camaro.Feature.Components.Models.IDeallist
+@using Glass.Mapper.Sc.Web.Mvc
+
+<p>Select Category</p>
+<select id="category" class="col-lg-4">
+    <option value="">Select Category</option>
+    @foreach (var category in Model.Categories)
+    {
+<option value="@category.Id.ToString()">@category.Text</option>
+    }
+</select>
+<p>Select SubCategory</p>
+<select id="subcategory" class="col-lg-4">
+    <option value="">Select SubCategory</option>
+    @foreach (var subcategory in Model.SubCategories)
+    {
+        <option value="@subcategory.Id.ToString()">@subcategory.Text</option>
+
+    }
+</select>
+<p>Search Query</p>
+<input type="text" placeholder="Enter Query" id="searchquery" />
+<a href="javascript:void(0);" id="btnsearchdeals" class="cart-btn">Search</a>
+<div id="deallist" data-settingsid="@Model.Id.ToString()" class="row">
+
+    </div>
+    <script id="Deals-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="col-lg-4">
+            <div class="single-product-one">
+                <div class="image-block">
+                    <img src="{{ImageURL}}" alt="Awesome Image" />
+                    <div class="hover-content-block">
+                        <a href="#"><i class="fa fa-heart-o"></i></a>
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fa fa-search-plus"></i></a>
+                    </div><!-- /.hover-content-block -->
+                </div><!-- /.image-block -->
+                <div class="text-block">
+                    <h3><a href="#">{{Title}}</a></h3>
+                    <p>{{Description}}</p>
+                    <p>{{Category.Text}}</p>
+                    <p>{{ExpiryDate}}</p>
+                    <p>Active : {{Active}}</p>
+                    {{#each SubCategory}}
+                    {{Text}},
+                    {{/each}}
+                    <br />
+                    <span class="price-line sale-price">{{OfferValue}}</span>
+                </div><!-- /.text-block -->
+            </div><!-- /.single-product-one -->
+        </div><!-- /.col-lg-4 -->
+        {{/each}}
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            LoadDeals();
+
+            $('#btnsearchdeals').click(function () {
+                LoadDeals();
+            });
+        });
+    </script>

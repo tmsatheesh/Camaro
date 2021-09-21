@@ -1,0 +1,27 @@
+﻿@model Camaro.Feature.Components.Models.Home.IProcess
+@using Glass.Mapper.Sc.Web.Mvc
+
+<section class="working-process-one">
+    <div class="container">
+        <div class="title-block">
+            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+            <h2>@Model.Title</h2>
+        </div><!-- /.title-block -->
+        <div class="working-process-wrap">
+            @if (Model.processLists != null && Model.processLists.Count() > 0)
+            {
+                foreach (var info in Model.processLists)
+                {
+                    <div class="single-working-process-one wow fadeInUp" data-wow-duration="1300ms" data-wow-delay="0ms">
+                        <div class="count-block">
+                            @info.Heading
+                        </div><!-- /.count-block -->
+                        <h3>@info.Title</h3>
+                        @Html.Raw(info.Details)
+                    </div><!-- /.single-working-process-one -->
+                }
+            }
+
+        </div><!-- /.working-process-wrap -->
+    </div><!-- /.container -->
+</section><!-- /.working-process-one -->

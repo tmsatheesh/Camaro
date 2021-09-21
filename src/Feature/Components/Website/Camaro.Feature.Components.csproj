@@ -122,11 +122,30 @@
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Mvp.Xml, Version=2.3.0.0, Culture=neutral, PublicKeyToken=6ead800d778c9b9f, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Mvp.Xml.2.3.0\lib\net20\Mvp.Xml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\RazorGenerator.Mvc.2.4.9\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RestSharp.106.12.0.0.Fakes">
+      <HintPath>FakesAssemblies\RestSharp.106.12.0.0.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Framework.Conditions, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Framework.Conditions.4.2.0\lib\netstandard2.0\Sitecore.Framework.Conditions.dll</HintPath>
@@ -265,9 +284,6 @@
       <Private>True</Private>
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
@@ -287,12 +303,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BannerController.cs" />
-    <Compile Include="Controllers\FooterController.cs" />
-    <Compile Include="Controllers\HeaderController.cs" />
-    <Compile Include="Models\Banners.cs" />
-    <Compile Include="Models\Footer.cs" />
-    <Compile Include="Models\Header.cs" />
+    <Compile Include="Controllers\About\OurTeamController.cs" />
+    <Compile Include="Controllers\About\AboutTitleController.cs" />
+    <Compile Include="Controllers\APIController.cs" />
+    <Compile Include="Controllers\CheckOut\BillingAddressController.cs" />
+    <Compile Include="Controllers\Home\BannerController.cs" />
+    <Compile Include="Controllers\Home\AdverController.cs" />
+    <Compile Include="Controllers\Home\CustomerController.cs" />
+    <Compile Include="Controllers\Home\AboutWithImageController.cs" />
+    <Compile Include="Controllers\Home\BrandsController.cs" />
+    <Compile Include="Controllers\Home\NewsController.cs" />
+    <Compile Include="Controllers\Home\ProcessController.cs" />
+    <Compile Include="Controllers\Home\FeedbackController.cs" />
+    <Compile Include="Controllers\Home\ServicesController.cs" />
+    <Compile Include="Controllers\Home\StoriesController.cs" />
+    <Compile Include="Controllers\Home\OffersController.cs" />
+    <Compile Include="Controllers\Services\ArmedSecurityController.cs" />
+    <Compile Include="Controllers\Site Data\FooterController.cs" />
+    <Compile Include="Controllers\DealController.cs" />
+    <Compile Include="Controllers\Site Data\HeaderController.cs" />
+    <Compile Include="Models\About\AboutTitle.cs" />
+    <Compile Include="Models\About\OurTeam.cs" />
+    <Compile Include="Models\APIData.cs" />
+    <Compile Include="Models\BaseData.cs" />
+    <Compile Include="Models\CheckOut\BillingAddress.cs" />
+    <Compile Include="Models\Home\AboutWithImage.cs" />
+    <Compile Include="Models\Home\Addver.cs" />
+    <Compile Include="Models\Home\Banners.cs" />
+    <Compile Include="Models\Deals\Constants.cs" />
+    <Compile Include="Models\Deals\Deallist.cs" />
+    <Compile Include="Models\Deals\DealRequest.cs" />
+    <Compile Include="Models\Deals\Deals.cs" />
+    <Compile Include="Models\Deals\DealSearchResultItem.cs" />
+    <Compile Include="Controllers\Home\CardWithImageController.cs" />
+    <Compile Include="Models\Home\Brands.cs" />
+    <Compile Include="Models\Home\CardWithImage.cs" />
+    <Compile Include="Models\Home\Customers.cs" />
+    <Compile Include="Models\Home\Feedback.cs" />
+    <Compile Include="Models\Home\News.cs" />
+    <Compile Include="Models\Home\Offers.cs" />
+    <Compile Include="Models\Home\Process.cs" />
+    <Compile Include="Models\Home\Services.cs" />
+    <Compile Include="Models\Home\Stories.cs" />
+    <Compile Include="Models\Services\ArmedSecurity.cs" />
+    <Compile Include="Models\Site Data\Footer.cs" />
+    <Compile Include="Models\Site Data\Header.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,8 +368,24 @@
     <Content Include="Properties\launchSettings.json" />
     <Content Include="Views\Camaro\Components\Header\Header.cshtml" />
     <Content Include="Views\Camaro\Components\Footer\Footer.cshtml" />
-    <Content Include="Views\Camaro\Components\Banner.cshtml" />
-    <Content Include="Views\Camaro\Components\Footer\Banner.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Banner.cshtml" />
+    <Content Include="Views\Camaro\Components\Deals\Deals.cshtml" />
+    <Content Include="Views\Camaro\Components\About\AboutTitle.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Offer.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\CardWithImage.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Stories.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Addver.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Services.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Customers.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\AboutWithImage.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Feedback.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Process.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\News.cshtml" />
+    <Content Include="Views\Camaro\Components\Home\Brands.cshtml" />
+    <Content Include="Views\Camaro\Components\About\OurTeam.cshtml" />
+    <Content Include="Views\Camaro\Components\Services\ArmedSecurity.cshtml" />
+    <Content Include="Views\Camaro\Components\API\API.cshtml" />
+    <Content Include="Views\Camaro\Components\BillingAddress\BillingAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Common\Content\website\Camaro.Foundation.Common.Content.csproj">

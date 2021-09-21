@@ -1,0 +1,19 @@
+﻿@model Camaro.Feature.Components.Models.About.IAboutTitle
+@using Glass.Mapper.Sc.Web.Mvc
+
+
+@using Sitecore.Resources.Media
+
+<section class="page-title-block text-center" style="background-image:url(@HashingUtils.ProtectAssetUrl(string.Format("{0}", Model.image.Src)))">
+@*<section class="page-title-block text-center" style="background: @Html.Glass().RenderImage(Model, x => x.image, isEditable: true) #222222 center center no-repeat fixed;">*@
+
+    <div class="container">
+        <h2>@Model.Heading</h2>
+        <div class="thm-breadcrumb">
+            @Html.Glass().RenderLink(Model, x => x.HomeLink, isEditable: true)
+            <span class="sep">/</span>
+            <span class="page-title">@Model.Text</span>
+        </div><!-- /.thm-breadcrumb -->
+    </div><!-- /.container -->
+</section><!-- /.page-title-block -->
+@*<section class="page-title-block text-center" style="background: #222222 url(@Html.Glass().RenderImage(Model, x=>x.image,isEditable:true)) center center no-repeat fixed;">*@

@@ -1,0 +1,51 @@
+﻿@model Camaro.Feature.Components.Models.Services.IArmedSecurity
+    @using Glass.Mapper.Sc.Web.Mvc
+
+    <section class="blog-style-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <div class="single-sidebar category-widget">
+                            <div class="widget-title">
+                                <h3>@Html.Glass().Editable(Model, x=>x.Heading)</h3>
+                            </div><!-- /.widget-title -->
+                            <ul class="category-list">
+                                @if (Model.ListItems != null && Model.ListItems.Count() > 0)
+                                {
+                                    foreach (var item in Model.ListItems)
+                                    {
+                                <li>
+                                    @Html.Glass().RenderLink(item, x => x.Links, isEditable: true)
+                                  
+                                </li>
+                                    }
+                                }
+                                
+                            </ul><!-- /.category-list -->
+                        </div><!-- /.single-sidebar -->
+                    </div><!-- /.sidebar -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-8">
+                    <div class="service-details-content">
+                        <div class="img-box">
+                            @Html.Glass().RenderImage(Model, x => x.Logo, isEditable: true)
+                        </div><!-- /.img-box -->
+                        <br />
+                        <h3>@Html.Glass().Editable(Model, x => x.MainHeading)</h3>
+                        @Html.Raw(Html.Glass().Editable(Model, x => x.Description))
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>@Html.Glass().Editable(Model, x => x.SubHeading)</h4>
+                                @Html.Raw(Html.Glass().Editable(Model, x => x.SubImageDescription))
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6">
+                                @Html.Glass().RenderImage(Model, x => x.SubImage, isEditable: true)
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.row -->
+                        @Html.Raw(Html.Glass().Editable(Model, x => x.SubDescription))
+                    </div><!-- /.service-details-content -->
+                </div><!-- /.col-lg-8 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog-style-three -->

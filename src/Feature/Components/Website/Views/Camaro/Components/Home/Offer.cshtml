@@ -1,0 +1,33 @@
+﻿@model Camaro.Feature.Components.Models.Home.IOffers
+@using Glass.Mapper.Sc.Web.Mvc
+
+<section class="offer-style-one">
+    <div class="container">
+        <div class="title-block">
+            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+            <h2>@Model.Title</h2>
+        </div><!-- /.title-block -->
+
+        <div class="row">
+            @if (Model.InfoItems != null && Model.InfoItems.Count() > 0)
+            {
+                foreach (var InfoItem in Model.InfoItems)
+                {
+
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-offer-style-one wow fadeInUp" data-wow-duration="1300ms" data-wow-delay="0ms">
+                            <div class="icon-block">
+                                <i class="cameron-icon-temperature"></i>
+                            </div><!-- /.icon-block -->
+                            <h3>@Html.Raw(InfoItem.LinkTitle)</h3>
+                            <p>@InfoItem.LinkDescription</p>
+                            @Html.Glass().RenderLink(InfoItem, x => x.CTALink, new {@class="more-link"}, isEditable: true)
+                        </div><!-- /.single-offer-style-one -->
+                    </div><!-- /.col-lg-3 -->
+                }
+            }
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.offer-style-one -->

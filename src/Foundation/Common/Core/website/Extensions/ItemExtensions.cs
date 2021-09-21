@@ -159,5 +159,28 @@ namespace Camaro.Foundation.Common.Core.Extensions
             var latestLanguageVersion = item.Versions.GetLatestVersion();
             return (latestLanguageVersion != null) && (latestLanguageVersion.Versions.Count > 0);
         }
+        public static List<Item> GetMultilistField(this Item source, string fieldname)
+        {
+            MultilistField multilistField = source.Fields[fieldname];
+            if (multilistField != null && multilistField.TargetIDs != null)
+            {
+
+                return multilistField.GetItems().ToList();
+            }
+            return new List<Item>();
+        }
+        public static bool GetCheckboxValue(this Item item, string fieldName)
+        {
+            CheckboxField chkbxvalue = null;
+            if (item != null && !string.IsNullOrEmpty(fieldName))
+            {
+                if (item.Fields[fieldName] != null)
+                {
+                    chkbxvalue = item.Fields[fieldName];
+                    return chkbxvalue.Checked;
+                }
+            }
+            return false;
+        }
     }
 }

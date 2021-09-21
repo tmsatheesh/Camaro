@@ -28,10 +28,15 @@
         <div class="container clearfix">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="logo-box clearfix">
-                <a class="navbar-brand" href="index-2.html">
+                @using (Html.Glass().BeginRenderLink(Model, x => x.LogoLink, new { @class = "navbar-brand" }, isEditable: true))
+                {
+                    @Html.Glass().RenderImage(Model, x => x.Logo1, new { @class = "main-logo" }, isEditable: true)
+                    @Html.Glass().RenderImage(Model, x => x.Logo2, new { @class = "stricky-logo" }, isEditable: true)
+                }
+                @*<a class="navbar-brand" href="index-2.html">
                     <img src="images/resources/logo-1-1.png" class="main-logo" alt="Awesome Image" />
                     <img src="images/resources/logo-1-2.png" class="stricky-logo" alt="Awesome Image" />
-                </a>
+                </a>*@
                 <button class="menu-toggler" data-target=".header-style-one .main-navigation">
                     <span class="fa fa-bars"></span>
                 </button>

@@ -1,0 +1,14 @@
+﻿@model Camaro.Feature.Components.Models.Home.IAddver
+@using Glass.Mapper.Sc.Web.Mvc
+
+
+<section class="cta-style-one text-center">
+    <div class="container">
+        <div class="title-block">
+            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+            <h2>@Model.Title</h2>
+        </div><!-- /.title-block -->
+        @Html.Raw(Model.Details)
+        @Html.Glass().RenderLink(Model, x=>x.Link, new { @class = "cta-btn" }, isEditable:true)
+    </div><!-- /.container -->
+</section><!-- /.cta-style-one -->

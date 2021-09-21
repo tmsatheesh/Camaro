@@ -11,7 +11,7 @@
                         {
                             @Html.Glass().RenderImage(Model, x => x.Logo, isEditable: true)
                         }
-                       
+
                         @Html.Raw(Html.Glass().Editable(Model, x => x.LogoDescription))
 
 
@@ -47,10 +47,8 @@
                                 foreach (var info in Model.linkItems)
                                 {
                                     <li>
-                                        @using (Html.Glass().BeginRenderLink(info, x => x.LinkingItems, isEditable: true))
-                                        {
-                                            @Html.Glass().Editable(info, x => x.LinkingItems)
-                                        }
+                                        @Html.Glass().RenderLink(info, x => x.LinkingItems, isEditable: true)
+
                                     </li>
 
                                 }
@@ -83,16 +81,17 @@
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget newsletter-widget">
-                        <div class="footer-widget-title">
-                            <h3>@Html.Glass().Editable(Model, x => x.TitleNews)</h3>
-                        </div><!-- /.footer-widget-title -->
-                        <form action="#" class="newsletter-form">
-                            @Html.Raw(Html.Glass().Editable(Model, x => x.DescripNews))
-                            <input type="text" placeholder="Enter your email">
-                            <button type="submit">@Html.Glass().Editable(Model, x => x.Button)</button>
-                        </form><!-- /.newsletter-form -->
-                    </div><!-- /.footer-widget newsletter-widget -->
+                    @Html.Sitecore().Placeholder("footer-right")
+                    @*<div class="footer-widget newsletter-widget">
+                            <div class="footer-widget-title">
+                                <h3>@Html.Glass().Editable(Model, x => x.TitleNews)</h3>
+                            </div><
+                            <form action="#" class="newsletter-form">
+                                @Html.Raw(Html.Glass().Editable(Model, x => x.DescripNews))
+                                <input type="text" placeholder="Enter your email">
+                                <button type="submit">@Html.Glass().Editable(Model, x => x.Button)</button>
+                            </form>
+                        </div>*@
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
         </div><!-- /.container -->

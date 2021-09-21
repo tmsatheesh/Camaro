@@ -234,6 +234,8 @@
   <ItemGroup>
     <Compile Include="BaseSearch\BaseSearchService.cs" />
     <Compile Include="BaseSearch\IBaseSearchService.cs" />
+    <Compile Include="ComputedFields\CategoryTextIndexField.cs" />
+    <Compile Include="ComputedFields\CategoryValueIndexField.cs" />
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Models\BaseSearchResultItem.cs" />
@@ -249,6 +251,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\website\Camaro.Foundation.Common.Core.csproj">
+      <Project>{87e68542-523a-4f30-bbce-35dc067b3c95}</Project>
+      <Name>Camaro.Foundation.Common.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

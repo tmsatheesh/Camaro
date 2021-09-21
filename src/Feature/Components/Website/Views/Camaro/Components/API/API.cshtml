@@ -1,0 +1,48 @@
+﻿@model Camaro.Feature.Components.Models.PublicDataResponse
+
+
+    <div class="container">
+        <h2>API Contents</h2>
+        <div class="row">
+            <table border=1>
+                <thead>
+                    <tr>
+
+                        <th>API</th>
+                        <th>Description</th>
+                        <th>Auth</th>
+                        <th>HTTPS</th>
+                        <th>Cors</th>
+                        <th>Link</th>
+                        <th>Category</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    @if (Model.Entries != null && Model.Entries.Count() > 0)
+                    {
+                        foreach (var items in Model.Entries)
+                        {
+                            <tr>
+                                <td>@items.API</td>
+                                <td>@items.Description</td>
+                                <td>@items.Auth</td>
+                                <td>@items.HTTPS</td>
+                                <td>@items.Cors</td>
+                                <td>@items.Link</td>
+                                <td>@items.Category</td>
+                            </tr>
+                        }
+                    }
+
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>

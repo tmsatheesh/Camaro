@@ -1,0 +1,56 @@
+﻿@model Camaro.Feature.Components.Models.Home.IServices
+@using Glass.Mapper.Sc.Web.Mvc
+
+
+<section class="service-style-one">
+    <div class="container">
+
+        @if (Model.Style == "ServicesAboutPage")
+        {
+            <div class="title-block-style-two text-center">
+                <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                <h2>@Model.Title</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br> mollit anim id est laborum.</p>
+            </div><!-- /.title-block -->
+        }
+        else
+        {
+            <div class="upper-block">
+                <div class="title-block">
+                    <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                    <h2>@Model.Title</h2>
+                </div><!-- /.title-block -->
+                <div class="carousel-btn-block service-carousel-btn">
+                    <span class="carousel-btn left-btn"><i class="cameron-icon-left-arrow"></i></span>
+                    <span class="carousel-btn right-btn"><i class="cameron-icon-right-arrow"></i></span>
+                </div><!-- /.carousel-btn-block service-carousel-btn -->
+            </div><!-- /.upper-block -->
+        }
+
+
+        <div class="services-carousel-one">
+            @if (Model.Infoimage != null && Model.Infoimage.Count() > 0)
+            {
+                foreach (var item in Model.Infoimage)
+                {
+                    <div class="item">
+                        <div class="single-service-one">
+                            <div class="image-block">
+                                @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                                <div class="overlay-block">
+                                    <a class="more-link" href="#"><i class="fa fa-arrows-alt"></i></a>
+                                </div><!-- /.overlay-block -->
+                            </div><!-- /.image-block -->
+                            <div class="text-block">
+                                <h3><a href="services.html">@item.LinkTitle</a></h3>
+                                <p>@item.LinkDescription</p>
+                                @Html.Glass().RenderLink(item, x => x.CTALink, new { @class = "more-btn" }, isEditable: true)<!-- /.more-btn -->
+                            </div><!-- /.text-block -->
+                        </div><!-- /.single-service-one -->
+                    </div><!-- /.col-lg-4 -->
+                }
+            }
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.service-style-one -->

@@ -12,6 +12,8 @@ namespace Camaro.Feature.Components.Models
     {
         [SitecoreField(FieldName = "List Items")]
         IEnumerable<INameWithLinks> NameLinkItems { get; set; }
+        [SitecoreField(FieldName = "Background Image")]
+        Image BGImage { get; set; }
     }
     public interface INameWithLinks:IGlassBase
     {

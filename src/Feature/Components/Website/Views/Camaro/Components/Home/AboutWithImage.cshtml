@@ -1,0 +1,79 @@
+﻿@model Camaro.Feature.Components.Models.Home.IAboutWithImage
+@using Glass.Mapper.Sc.Web.Mvc
+
+
+<section class="featured-style-one">
+    <div class="container">
+        <div class="row no-gutters wow fadeInUp" data-wow-duration="1300ms">
+            @*@if (Model.CardStyle == "LeftImage")
+            {
+                <div class="col-lg-6">
+                    <div class="image-block">
+                        <img src="@Model.Image" alt="awesome image">
+                    </div><!-- /.image-block -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6 d-flex block-wrapper">
+                    <div class="content-block my-auto">
+                        <div class="title-block">
+                            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                            <h2>@Model.Title</h2>
+                        </div><!-- /.title-block -->
+                        @if (Model.InfoItems != null && Model.InfoItems.Count > 0)
+                        {
+                            foreach (var infoItem in Model.InfoItems)
+                            {
+                                <div class="signle-featured-one">
+                                    <div class="icon-block">
+                                        <div class="inner-block">
+                                            <i class="cameron-icon-user"></i><!-- /.cameron-icon-star -->
+                                        </div><!-- /.inner-block -->
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <h3>@infoItem.Title</h3>
+                                        @Html.Raw(infoItem.Description)
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.signle-featured-one -->
+                            }
+                        }
+                    </div><!-- /.content-block -->
+                </div><!-- /.col-lg-6 -->
+
+            }
+            else
+            {*@
+
+
+                <div class="col-lg-6 d-flex block-wrapper">
+                    <div class="content-block my-auto">
+                        <div class="title-block">
+                            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                            <h2>@Model.Title</h2>
+                        </div><!-- /.title-block -->
+                        @if (Model.InfoItems != null && Model.InfoItems.Count() > 0)
+                        {
+                            foreach (var infoItem in Model.InfoItems)
+                            {
+                                <div class="signle-featured-one">
+                                    <div class="icon-block">
+                                        <div class="inner-block">
+                                            <i class="cameron-icon-user"></i><!-- /.cameron-icon-star -->
+                                        </div><!-- /.inner-block -->
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <h3>@infoItem.Title</h3>
+                                        @Html.Raw(infoItem.Description)
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.signle-featured-one -->
+                            }
+                        }
+                    </div><!-- /.content-block -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="image-block">
+                        @Html.Glass().RenderImage(Model, x=>x.Image, isEditable:true)
+                    </div><!-- /.image-block -->
+                </div><!-- /.col-lg-6 -->
+            
+        </div><!-- /.row no-gutters -->
+    </div><!-- /.container -->
+</section><!-- /.featured-style-one -->

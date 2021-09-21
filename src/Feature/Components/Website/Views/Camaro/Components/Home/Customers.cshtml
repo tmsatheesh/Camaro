@@ -1,0 +1,26 @@
+﻿@model Camaro.Feature.Components.Models.Home.ICustomers
+@using Glass.Mapper.Sc.Web.Mvc
+
+
+<section class="fun-fact-style-one">
+    <div class="container">
+        <div class="fun-fact-block-wrapper">
+            @if (Model.HeadDet != null && Model.HeadDet.Count() > 0)
+            {
+                foreach (var item in Model.HeadDet)
+                {
+                    <div class="single-fun-fact-one">
+                        <div class="icon-block">
+                            <i class="cameron-icon-locked"></i>
+                        </div><!-- /.icon-block -->
+                        <div class="text-block">
+                            <h3 class="counter">@item.Heading</h3>
+                            <p>@item.Details</p>
+                        </div><!-- /.text-block -->
+                    </div><!-- /.single-fun-fact-one -->
+                }
+            }
+
+        </div><!-- /.fun-fact-block-wrapper -->
+    </div><!-- /.container -->
+</section><!-- /.fun-fact-style-one -->

@@ -11,7 +11,7 @@ function LoadDeals() {
     //});
     $.ajax({
         type: 'POST',
-        url: '/api/sitecore/Deals/GetPostDeals',
+        url: '/api/sitecore/Deal/GetSolrDeals',
         data: {
             "settingsid": $('#deallist').data('settingsid'),
             "categoryid": $('#category').val(),
@@ -32,3 +32,4 @@ function UpdateDealsTemplate(data) {
     var html = templateScript(context);
     document.getElementById('deallist').innerHTML = html;
 }
+

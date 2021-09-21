@@ -1,0 +1,96 @@
+﻿@model Camaro.Feature.Components.Models.Home.ICardWithImage
+@using Glass.Mapper.Sc.Web.Mvc
+
+<section class="about-style-one">
+    <div class="container">
+        <div class="row">
+            @*@if (Model.ImgStyle == "RightImage")
+                {
+                    <div class="col-lg-6">
+                        <div class="image-block">
+                            <img src="@Model.Image" alt="Awesome Image" />
+                        </div><!-- /.image-block -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="content-block my-auto">
+                            <div class="title-block">
+                                <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                                <h2>@Model.Title</h2>
+                            </div><!-- /.title-block -->
+                            @Html.Raw(Model.Description)
+                            <a href="@Model.CTALink" class="more-btn">@Model.CTAText</a>
+                        </div><!-- /.content-block -->
+                    </div><!-- /.col-lg-6 -->
+                }
+                else
+                {*@
+
+            @if (Model.ImgStyle == "LeftImage")
+            {
+                <div class="col-lg-6">
+                    <div class="image-block">
+                        @Html.Glass().RenderImage(Model, x => x.Image, isEditable: true)
+                    </div><!-- /.image-block -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6 d-flex">
+                    <div class="content-block my-auto">
+                        <div class="title-block">
+                            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                            <h2>@Model.Title</h2>
+                        </div><!-- /.title-block -->
+                        @Html.Raw(Model.Description)
+                        @Html.Glass().RenderLink(Model, x => x.CTALink, new { @class = "more-btn" }, isEditable: true)
+                    </div><!-- /.content-block -->
+                </div><!-- /.col-lg-6 -->
+
+            }
+            @if (Model.ImgStyle == "LeftImageWithVideo")
+            {
+                <div class="col-lg-6">
+                    <div class="video-block-style-one">
+                    
+                        @Html.Glass().RenderImage(Model, x => x.Image, isEditable: true)
+                        
+                        @using (Html.Glass().BeginRenderLink(Model, x => x.CTALink, new { @class = "video-button" }, isEditable: true))
+                        {
+                            <i class="fa fa-play"></i>
+
+                        }
+                        
+                    </div><!-- /.image-block -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6 d-flex">
+                    <div class="content-block my-auto">
+                        <div class="title-block">
+                            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                            <h2>@Model.Title</h2>
+                        </div><!-- /.title-block -->
+                        @Html.Raw(Model.Description)
+                        @Html.Glass().RenderLink(Model, x => x.CTALink, new { @class = "more-btn" }, isEditable: true)
+                    </div><!-- /.content-block -->
+                </div><!-- /.col-lg-6 -->
+
+            }
+            else
+            {
+                <div class="col-lg-6 d-flex">
+                    <div class="content-block my-auto">
+                        <div class="title-block">
+                            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+                            <h2>@Model.Title</h2>
+                        </div><!-- /.title-block -->
+                        @Html.Raw(Model.Description)
+                        @Html.Glass().RenderLink(Model, x => x.CTALink, new { @class = "more-btn" }, isEditable: true)
+                    </div><!-- /.content-block -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="image-block">
+                        @Html.Glass().RenderImage(Model, x => x.Image, isEditable: true)
+                    </div><!-- /.image-block -->
+                </div><!-- /.col-lg-6 -->
+            }
+
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.about-style-one -->

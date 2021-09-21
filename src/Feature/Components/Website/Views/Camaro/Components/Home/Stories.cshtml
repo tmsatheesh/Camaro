@@ -1,0 +1,23 @@
+﻿@model Camaro.Feature.Components.Models.Home.IStories
+@using Glass.Mapper.Sc.Web.Mvc
+
+<section class="mission-style-one wow fadeInUp" data-wow-duration="1300ms">
+    <div class="container">
+        <div class="inner-container">
+            @if (Model.Infoitems != null && Model.Infoitems.Count() > 0)
+            {
+                foreach (var item in Model.Infoitems)
+                {
+                    <div class="single-mission-one">
+                        <div class="count-block">
+                            @item.Heading
+                        </div><!-- /.count-block -->
+                        <h3>@item.Title</h3>
+                        <p>@item.Description</p>
+                    </div><!-- /.single-mission-one -->
+                }
+            }
+
+        </div><!-- /.inner-container -->
+    </div><!-- /.container -->
+</section><!-- /.mission-style-one -->

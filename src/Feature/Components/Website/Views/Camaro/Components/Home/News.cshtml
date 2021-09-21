@@ -1,0 +1,54 @@
+﻿@model Camaro.Feature.Components.Models.Home.INews
+@using Glass.Mapper.Sc.Web.Mvc
+<section class="blog-style-one">
+    <div class="container">
+        <div class="title-block text-center">
+            <span class="tag-line">@Model.Heading</span><!-- /.tag-line -->
+            <h2>@Model.Title</h2>
+        </div><!-- /.title-block -->
+        <div class="row high-gutter">
+            @if (Model.multiLinkLists != null && Model.multiLinkLists.Count() > 0)
+            {
+                foreach (var item in Model.multiLinkLists)
+                {
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="single-blog-style-one">
+                            <div class="image-block">
+                                @Html.Glass().RenderImage(item, x=>x.Image, isEditable:true)
+                                <div class="overlay-block">
+                                    <a class="more-link" href="#"><i class="fa fa-arrows-alt"></i></a>
+                                </div><!-- /.overlay-block -->
+                            </div><!-- /.image-block -->
+                            <div class="text-block">
+                                <h3>@Html.Glass().RenderLink(item, x => x.Title, isEditable: true)</h3>
+                                <div class="meta-info">
+                                    @using (Html.Glass().BeginRenderLink(item, x => x.Admin, isEditable: true))
+                                    {
+                                        <i class="fa fa-user-o"></i>
+                                        @Html.Glass().Editable(item, x => x.Admin)
+
+                                    }
+                                    @using (Html.Glass().BeginRenderLink(item, x => x.Calendar, isEditable: true))
+                                    {
+                                        <i class="fa fa-calendar-o"></i>
+                                        @Html.Glass().Editable(item, x => x.Calendar)
+                                    }
+                                    @using (Html.Glass().BeginRenderLink(item, x => x.Comment, isEditable: true))
+                                    {
+                                        <i class="fa fa-comments-o"></i>
+                                        @Html.Glass().Editable(item, x => x.Comment)
+                                    }
+                                    @*<a href="@item.Admin"><i class="fa fa-user-o"></i> @item.AdminText</a>
+        <a href="@item.Calendar"><i class="fa fa-calendar-o"></i> @item.CalendarText</a>
+        <a href="@item.Comment"><i class="fa fa-comments-o"></i> @item.CommentText</a>*@
+                                </div><!-- /.meta-info -->
+                                @Html.Glass().RenderLink(item, x => x.ReadMore, isEditable: true)<!-- /.more-btn -->
+                            </div><!-- /.text-block -->
+                        </div><!-- /.single-blog-style-one -->
+                    </div><!-- /.col-lg-6 -->
+                }
+            }
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.blog-style-one -->
